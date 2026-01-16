@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Notifications - CDOE, Dibrugarh University</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript/notif.js" defer></script>
+    <script src="javascript/mobile-navbar.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="https://dibru.ac.in" target="_blank"><img src="media/DUgif.gif" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about-call">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+        </button>
+    </nav>
+    <section class="page-header">
+        <h1>Official Notifications</h1>
+        <p>Stay updated with the latest academic and administrative announcements.</p>
+    </section>
+</header>
+
+    <section class="filter-section">
+    <div class="filter-container">
+        <div class="search-wrapper">
+            <input type="text" id="notifSearch" placeholder="Search by keyword (e.g. Exam, Admission, Holiday)..." onkeyup="filterNotifications()">
+        </div>
+
+        <div class="category-bar">
+            <button class="cat-btn active" onclick="filterCategory('all')">All</button>
+            <button class="cat-btn" onclick="filterCategory('examination')">Examination</button>
+            <button class="cat-btn" onclick="filterCategory('general')">General</button>
+            <button class="cat-btn" onclick="filterCategory('administration')">Administration</button>
+        </div>
+    </div>
+</section>
+
+<section class="notifications-list-wrapper">
+    <div id="notifList">
+        <div class="notif-item" data-category="examination">
+            <span class="notif-date">Jan 12, 2026</span>
+            <a href="#" class="notif-link">Term End Examination Schedule - July Session <span class="badge">New</span></a>
+        </div>
+        
+        <div class="notif-item" data-category="general">
+            <span class="notif-date">Jan 10, 2026</span>
+            <a href="docs/DUHolidayList26.pdf" class="notif-link">Official Holiday List 2026</a>
+        </div>
+
+        <div class="notif-item" data-category="administration">
+            <span class="notif-date">Jan 08, 2026</span>
+            <a href="#" class="notif-link">Office Order: New Faculty Appointments</a>
+        </div>
+
+        <div class="notif-item" data-category="general"><span class="notif-date">Jan 05, 2026</span><a href="#" class="notif-link">Academic Calendar 2026</a></div>
+        <div class="notif-item" data-category="examination"><span class="notif-date">Jan 04, 2026</span><a href="#" class="notif-link">Result Declaration: BCA 3rd Semester</a></div>
+        <div class="notif-item" data-category="general"><span class="notif-date">Jan 02, 2026</span><a href="#" class="notif-link">Student Code of Conduct Manual</a></div>
+        <div class="notif-item" data-category="administration"><span class="notif-date">Jan 01, 2026</span><a href="#" class="notif-link">Message from the Director on New Year</a></div>
+        <div class="notif-item" data-category="examination"><span class="notif-date">Dec 28, 2025</span><a href="#" class="notif-link">Re-evaluation Process Guidelines</a></div>
+        <div class="notif-item" data-category="general"><span class="notif-date">Dec 25, 2025</span><a href="#" class="notif-link">Winter Break Announcement</a></div>
+        <div class="notif-item" data-category="administration"><span class="notif-date">Dec 20, 2025</span><a href="#" class="notif-link">Updated Campus Safety Protocol</a></div>
+        <div class="notif-item" data-category="examination"><span class="notif-date">Dec 15, 2025</span><a href="#" class="notif-link">Backlog Exam Form Submission</a></div>
+    </div>
+    
+    <div id="noResults" style="display:none; text-align:center; padding: 40px; color: #666;">
+        No notifications found matching your criteria.
+    </div>
+
+    <div class="load-more-container" id="loadMoreContainer" style="text-align: center; margin-top: 30px;">
+        <button class="btn-primary" onclick="loadMore()">Load More Notifications</button>
+    </div>
+</section>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <img src="media/img2.jpg" alt="DU Logo" class="footer-logo">
+            <h3>Dibrugarh University</h3>
+            <p>Dibrugarh-786004<br>Assam, India</p>
+            <p><strong>Email:</strong> registrar@dibru.ac.in</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Academic Regulations</a></li>
+                <li><a href="#">UGC-DEB</a></li>
+                <li><a href="#">SWAYAM</a></li>
+                <li><a href="#">National Digital Library</a></li>
+                <li><a href="#">Ministry of Education</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Other Links</h4>
+            <ul>
+                <li><a href="#">E - Services</a></li>
+                <li><a href="#">Old Question Papers</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h4>Help Desk</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Site Map</a></li>
+                <li><a href="#">Contact Information</a></li>
+                <li><a href="#">How to reach DU</a></li>
+                <li><a href="#">Google Map</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; All Rights Reserved 2026 | Digital Solutions Cell, Dibrugarh University </p>
+    </div>
+    </footer>
+
+</body>
+</html>
